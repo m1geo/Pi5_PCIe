@@ -1,5 +1,6 @@
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
+# Ignore file: https://github.com/github/gitignore/blob/main/KiCad.gitignore
 
 # Temporary files
 *.000
@@ -16,6 +17,16 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+fp-lib-table
+
+# Gerbers
+gerber
+gerbers
+*.gbr
+*.zip
+
+# SVG
+*.svg
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -27,3 +38,6 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# Mac
+.DS_Store
