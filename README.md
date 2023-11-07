@@ -5,4 +5,4 @@ In this bare-bones project I document a working PCIe pinout talk through my hard
 
 To see what I did, check out my walkthrough of the process on YouTube: [Raspberry Pi 5 - Unofficial PCIe Success - Hacking the Pi5's PCIe into life](https://youtu.be/G5VOzO_ERTM).
 
-**To be clear: This project is not suitable for long term use - use the official Raspberry Pi documentation when using the PCIe FPC**
+**Note: This project is a reverse engineering - Please wait for/use the official Raspberry Pi documentation when using the PCIe FPC**
