@@ -6,8 +6,8 @@
 
   (title_block
     (title "Raspberry Pi 5 PCIe Breakout")
-    (date "2023-11-09")
-    (rev "0.3")
+    (date "2023-11-11")
+    (rev "0.4")
     (company "George M1GEO, Chris G8OCV")
     (comment 1 "https://www.george-smart.co.uk")
     (comment 2 "https://github.com/m1geo/Pi5_PCIe")
@@ -680,6 +680,89 @@
           (number "1" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at 2.54 0 180) (length 1.778)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Device:LED" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "LED" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "LED diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Light emitting diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "LED_0_1"
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "LED_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
           (name "A" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
@@ -1431,6 +1514,10 @@
     (stroke (width 0) (type default))
     (uuid 19ee5d99-926f-4f0d-bd5c-7437c6cff1c1)
   )
+  (wire (pts (xy 141.605 152.4) (xy 141.605 154.305))
+    (stroke (width 0) (type default))
+    (uuid 1c9be0fa-e248-4a16-adda-710a698c5cb2)
+  )
   (wire (pts (xy 198.755 38.735) (xy 198.755 40.005))
     (stroke (width 0) (type default))
     (uuid 1d51e3e8-5256-4efd-a58f-173ca1024422)
@@ -1527,6 +1614,10 @@
     (stroke (width 0) (type default))
     (uuid 34448e00-77ab-4112-81d9-001988d3a514)
   )
+  (wire (pts (xy 143.51 136.525) (xy 141.605 136.525))
+    (stroke (width 0) (type default))
+    (uuid 36984e00-8403-429e-aaf8-04ed7214c211)
+  )
   (wire (pts (xy 172.085 34.925) (xy 172.085 36.195))
     (stroke (width 0) (type default))
     (uuid 37307996-2ff8-49c0-8dc7-ef426fc69451)
@@ -1574,6 +1665,10 @@
   (wire (pts (xy 186.69 73.66) (xy 184.785 73.66))
     (stroke (width 0) (type default))
     (uuid 43594621-76b2-4082-8673-8ffe4e8965f9)
+  )
+  (wire (pts (xy 141.605 142.875) (xy 141.605 144.78))
+    (stroke (width 0) (type default))
+    (uuid 43b69215-e9f3-4118-9a44-704c7b603d87)
   )
   (wire (pts (xy 48.26 172.72) (xy 48.26 175.26))
     (stroke (width 0) (type default))
@@ -1675,6 +1770,10 @@
     (stroke (width 0) (type default))
     (uuid 60b39e81-6a3c-4027-ae0c-f3aec2606d70)
   )
+  (wire (pts (xy 141.605 136.525) (xy 141.605 137.795))
+    (stroke (width 0) (type default))
+    (uuid 61809419-72ac-4778-989f-9960827bde77)
+  )
   (wire (pts (xy 187.325 153.67) (xy 192.405 153.67))
     (stroke (width 0) (type default))
     (uuid 619ac42b-80e4-45c4-8330-7754cc015dff)
@@ -1682,6 +1781,10 @@
   (wire (pts (xy 220.98 101.6) (xy 229.87 101.6))
     (stroke (width 0) (type default))
     (uuid 631512ae-8234-4929-b184-9a819da9ba58)
+  )
+  (wire (pts (xy 133.35 152.4) (xy 133.35 154.305))
+    (stroke (width 0) (type default))
+    (uuid 633e4622-ee4a-48d2-ba4d-923e19ba445e)
   )
   (wire (pts (xy 100.965 180.34) (xy 102.235 180.34))
     (stroke (width 0) (type default))
@@ -1734,6 +1837,10 @@
   (wire (pts (xy 255.27 60.325) (xy 259.08 60.325))
     (stroke (width 0) (type default))
     (uuid 76128ccc-a964-42cc-956f-d8d33b4a9b57)
+  )
+  (wire (pts (xy 133.35 142.875) (xy 133.35 144.78))
+    (stroke (width 0) (type default))
+    (uuid 7743096b-6c2f-4ad8-8148-081e273725de)
   )
   (wire (pts (xy 229.87 128.905) (xy 229.87 130.175))
     (stroke (width 0) (type default))
@@ -1934,6 +2041,10 @@
   (wire (pts (xy 192.405 152.4) (xy 192.405 153.67))
     (stroke (width 0) (type default))
     (uuid ad524c47-3269-4048-b28c-762aca8f121e)
+  )
+  (wire (pts (xy 133.35 135.89) (xy 133.35 137.795))
+    (stroke (width 0) (type default))
+    (uuid ade575e6-5c35-4e89-ac7c-313c8b44baf0)
   )
   (wire (pts (xy 55.88 121.92) (xy 59.69 121.92))
     (stroke (width 0) (type default))
@@ -2248,6 +2359,10 @@
     (effects (font (size 1 1) (thickness 0.254) bold (color 255 153 255 1)) (justify left bottom))
     (uuid 0c676a04-5122-49fc-a061-34f5a621cf32)
   )
+  (text "RED" (at 144.145 153.67 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 195ae657-2d2d-4ebf-bf53-cbcf552a5425)
+  )
   (text "PCIe EMS R4.0 V1.0, §3.2: \"the system board\nmust connect PRSNT1# to GND\". (See Figure 14)"
     (at 229.235 28.575 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2328,7 +2443,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6a35967f-90f5-4760-ab6d-bd0d1b9296f0)
   )
-  (text "D2 option to supply\n3V3 from 5V?" (at 53.975 171.45 0)
+  (text "D3 option to supply\n3V3 from 5V?" (at 53.975 171.45 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 775ddb27-4b91-49a1-b5bc-6239ed6fa9ee)
   )
@@ -2433,6 +2548,10 @@
   (text "OD = Open drain" (at 209.55 92.71 0)
     (effects (font (size 1 1) (thickness 0.254) bold (color 255 204 102 1)) (justify left bottom))
     (uuid fca1f8a4-f259-48fb-a86f-f616ed7d5675)
+  )
+  (text "GRN" (at 135.89 153.67 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid fcfa97f2-b639-48cc-84f7-3ce657558106)
   )
   (text "H2C" (at 217.17 68.58 0)
     (effects (font (size 1 1) (thickness 0.254) bold (color 153 153 255 1)) (justify left bottom))
@@ -2602,6 +2721,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "RESET" (shape input) (at 143.51 136.525 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d3eab33f-d440-42be-aaf0-0eb5b242f309)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 152.2403 136.525 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "PCIE_TX0P" (shape input) (at 200.025 67.945 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d6f4a4b5-7aaf-445e-84f8-cc94bff70787)
@@ -2655,7 +2781,7 @@
   (symbol (lib_id "Device:C_Small") (at 60.325 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 02c6c152-a1bb-47a4-ab6c-39b495f22333)
-    (property "Reference" "C3" (at 62.865 179.705 0)
+    (property "Reference" "C2" (at 62.865 179.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 62.865 182.245 0)
@@ -2672,7 +2798,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C3") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2692,13 +2818,13 @@
   (symbol (lib_id "Device:R_Small") (at 110.49 74.93 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 03c94c81-10af-4236-ad2d-0287c9f3e525)
-    (property "Reference" "R9" (at 110.49 71.12 90)
+    (property "Reference" "R5" (at 110.49 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 110.49 73.025 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 110.49 74.93 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 110.49 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 110.49 74.93 0)
@@ -2709,7 +2835,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R9") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -2718,7 +2844,7 @@
   (symbol (lib_id "Device:D_Schottky_Small") (at 48.26 170.18 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 05bac831-883a-47c3-a316-3ea388fcb6b4)
-    (property "Reference" "D2" (at 50.165 170.18 90)
+    (property "Reference" "D3" (at 50.165 170.18 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "(5V)" (at 46.355 168.529 90)
@@ -2738,7 +2864,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "D2") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2752,7 +2878,7 @@
   (symbol (lib_id "Device:C_Small") (at 194.31 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06140c0d-cbe7-401d-9d50-e2cab4a5aaae)
-    (property "Reference" "C8" (at 196.85 104.775 0)
+    (property "Reference" "C7" (at 196.85 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 196.85 107.315 0)
@@ -2769,7 +2895,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C8") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2789,13 +2915,13 @@
   (symbol (lib_id "Device:R_Small") (at 173.99 40.005 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0f5fb0b8-a4b6-4a15-a7f6-6306a3670a44)
-    (property "Reference" "R5" (at 175.26 39.37 0)
+    (property "Reference" "R7" (at 175.26 39.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 175.26 41.275 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 173.99 40.005 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 173.99 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 173.99 40.005 0)
@@ -2806,7 +2932,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R5") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -2815,7 +2941,7 @@
   (symbol (lib_id "Device:C_Small") (at 220.98 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0f73b51a-08c1-43d5-9cbd-f509ad5286b3)
-    (property "Reference" "C11" (at 223.52 104.775 0)
+    (property "Reference" "C13" (at 223.52 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 223.52 107.315 0)
@@ -2832,7 +2958,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C11") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2852,7 +2978,7 @@
   (symbol (lib_id "Device:C_Small") (at 247.65 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 136c4b24-ae7b-468d-b236-6ad1f29dc511)
-    (property "Reference" "C14" (at 250.19 104.775 0)
+    (property "Reference" "C19" (at 250.19 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 250.19 107.315 0)
@@ -2869,7 +2995,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C14") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2889,7 +3015,7 @@
   (symbol (lib_id "power:GND") (at 187.325 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1499ddd0-0b48-40bc-93b0-1d3d2ffd4e22)
-    (property "Reference" "#PWR055" (at 187.325 161.29 0)
+    (property "Reference" "#PWR024" (at 187.325 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 187.325 158.75 0)
@@ -2905,7 +3031,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2928,7 +3054,7 @@
   (symbol (lib_id "power:GND") (at 185.42 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1b7bf762-8e50-4823-9aa6-f1f9ef4869c7)
-    (property "Reference" "#PWR042" (at 185.42 136.525 0)
+    (property "Reference" "#PWR023" (at 185.42 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 185.42 133.985 0)
@@ -2944,7 +3070,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -2967,7 +3093,7 @@
   (symbol (lib_id "Device:C_Small") (at 203.2 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1bc5483e-2dd5-41f6-b360-61b2f550acb8)
-    (property "Reference" "C16" (at 205.74 125.73 0)
+    (property "Reference" "C10" (at 205.74 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 205.74 128.27 0)
@@ -2984,7 +3110,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C16") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3004,7 +3130,7 @@
   (symbol (lib_id "power:GND") (at 69.215 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1be26b7b-cfb9-41c8-8a86-a0efa1b8b6d0)
-    (property "Reference" "#PWR026" (at 69.215 190.5 0)
+    (property "Reference" "#PWR010" (at 69.215 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 69.215 187.96 0)
@@ -3020,7 +3146,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3040,13 +3166,13 @@
   (symbol (lib_id "Device:R_Small") (at 44.45 86.995 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c5c6379-5516-4590-9ddb-5b963d51dbaf)
-    (property "Reference" "R12" (at 44.45 83.185 90)
+    (property "Reference" "R3" (at 44.45 83.185 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNF" (at 44.45 85.09 90)
       (effects (font (size 1.27 1.27) italic))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 44.45 86.995 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 44.45 86.995 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 86.995 0)
@@ -3057,7 +3183,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R12") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -3066,7 +3192,7 @@
   (symbol (lib_id "power:GND") (at 109.22 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26698b00-d691-4264-9f1b-d897c537ea20)
-    (property "Reference" "#PWR029" (at 109.22 190.5 0)
+    (property "Reference" "#PWR014" (at 109.22 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 109.22 187.96 0)
@@ -3082,7 +3208,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3102,7 +3228,7 @@
   (symbol (lib_id "power:GND") (at 194.31 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26850016-78a6-4243-acff-9f37b792d5c0)
-    (property "Reference" "#PWR036" (at 194.31 115.57 0)
+    (property "Reference" "#PWR027" (at 194.31 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.31 113.03 0)
@@ -3118,7 +3244,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3138,7 +3264,7 @@
   (symbol (lib_id "power:+12V") (at 233.68 40.005 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 291df36b-623d-442a-a1b8-de44d525517b)
-    (property "Reference" "#PWR04" (at 233.68 43.815 0)
+    (property "Reference" "#PWR043" (at 233.68 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 233.68 36.83 0)
@@ -3154,7 +3280,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -3163,7 +3289,7 @@
   (symbol (lib_id "Connector:Barrel_Jack_Switch") (at 26.67 177.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2b76457e-c035-412f-b7f0-718b06278d82)
-    (property "Reference" "J2" (at 26.67 170.18 0)
+    (property "Reference" "J1" (at 26.67 170.18 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "12V IN" (at 26.67 172.72 0)
@@ -3184,7 +3310,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "J2") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3204,7 +3330,7 @@
   (symbol (lib_id "Device:C_Small") (at 229.87 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2c566aa6-268f-4706-a67d-463e7fe81f16)
-    (property "Reference" "C12" (at 232.41 104.775 0)
+    (property "Reference" "C15" (at 232.41 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 232.41 107.315 0)
@@ -3221,7 +3347,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C12") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3241,7 +3367,7 @@
   (symbol (lib_id "power:GND") (at 203.2 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2c99983d-e02b-4b4f-bee0-808a719d3c18)
-    (property "Reference" "#PWR035" (at 203.2 115.57 0)
+    (property "Reference" "#PWR031" (at 203.2 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 203.2 113.03 0)
@@ -3257,7 +3383,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3277,7 +3403,7 @@
   (symbol (lib_id "10018783-11200TLF:10018783-11200TLF") (at 216.535 57.785 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2d6627b2-df46-487d-90c7-32916943124f)
-    (property "Reference" "J1" (at 216.535 27.94 0)
+    (property "Reference" "J3" (at 216.535 27.94 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10018783-11200TLF" (at 216.535 30.48 0)
@@ -3340,7 +3466,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "J1") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -3399,7 +3525,7 @@
   (symbol (lib_id "Device:C_Small") (at 109.22 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 33679448-df19-484b-bd5f-e3b07290ef28)
-    (property "Reference" "C5" (at 111.76 179.705 0)
+    (property "Reference" "C3" (at 111.76 179.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 111.76 182.245 0)
@@ -3416,7 +3542,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C5") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3470,7 +3596,7 @@
   (symbol (lib_id "power:+5V") (at 40.64 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3ba401e3-c050-4a8e-9d2c-e7b3b1ac08e9)
-    (property "Reference" "#PWR024" (at 40.64 116.84 0)
+    (property "Reference" "#PWR03" (at 40.64 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 40.64 109.22 0)
@@ -3486,7 +3612,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -3520,13 +3646,13 @@
   (symbol (lib_id "Device:R_Small") (at 172.085 40.005 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3e7e8df3-63f5-4984-8bf6-89db1c0f853e)
-    (property "Reference" "R4" (at 170.815 39.37 0)
+    (property "Reference" "R6" (at 170.815 39.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 170.815 41.275 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 172.085 40.005 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 172.085 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 172.085 40.005 0)
@@ -3537,7 +3663,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R4") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -3546,7 +3672,7 @@
   (symbol (lib_id "power:+12V") (at 185.42 100.33 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3f6f1637-34c7-48c8-876c-11f71dbbef21)
-    (property "Reference" "#PWR041" (at 185.42 104.14 0)
+    (property "Reference" "#PWR020" (at 185.42 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 185.42 97.155 0)
@@ -3562,7 +3688,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -3596,13 +3722,13 @@
   (symbol (lib_id "Device:R_Small") (at 186.055 40.005 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 41e8aff6-25f3-410a-9e96-d19d054988df)
-    (property "Reference" "R8" (at 187.325 39.37 0)
+    (property "Reference" "R10" (at 187.325 39.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 187.325 41.275 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 186.055 40.005 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 186.055 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 186.055 40.005 0)
@@ -3613,7 +3739,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R8") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -3622,7 +3748,7 @@
   (symbol (lib_id "power:GND") (at 118.11 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4255c028-2b4c-4c92-8a96-80e54656b713)
-    (property "Reference" "#PWR030" (at 118.11 190.5 0)
+    (property "Reference" "#PWR016" (at 118.11 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 118.11 187.96 0)
@@ -3638,7 +3764,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3655,10 +3781,49 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 133.35 154.305 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4429a653-2ee3-4dae-b55f-2230f5f2aec0)
+    (property "Reference" "#PWR057" (at 133.35 160.655 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 133.35 158.115 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 133.35 154.305 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 133.35 154.305 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c8d7ea4e-a29b-45aa-848e-6ba3cf1c1ad5))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR057") (unit 1)
+        )
+      )
+      (project "SDR_Carrier"
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
+          (reference "#PWR027") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
+          (reference "#PWR08") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/7450db62-14c0-4445-b3aa-49bf2347e9e1"
+          (reference "#PWR052") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
+          (reference "#PWR087") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 41.91 138.43 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4468df3a-ad69-459d-938d-95525383e340)
-    (property "Reference" "#PWR022" (at 41.91 144.78 0)
+    (property "Reference" "#PWR04" (at 41.91 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 41.91 142.875 0)
@@ -3674,7 +3839,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -3683,7 +3848,7 @@
   (symbol (lib_id "power:+5V") (at 247.65 122.555 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44f0c6cc-ff01-468e-9b71-2eed00ec5d63)
-    (property "Reference" "#PWR016" (at 247.65 126.365 0)
+    (property "Reference" "#PWR050" (at 247.65 126.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 247.65 118.745 0)
@@ -3699,7 +3864,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
     )
@@ -3733,7 +3898,7 @@
   (symbol (lib_id "Device:C_Small") (at 194.31 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4753e37e-147e-4c43-8bd6-05f9a3172684)
-    (property "Reference" "C15" (at 196.85 125.73 0)
+    (property "Reference" "C8" (at 196.85 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 196.85 128.27 0)
@@ -3750,7 +3915,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C15") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3770,7 +3935,7 @@
   (symbol (lib_id "power:GND") (at 248.285 36.195 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 479bf8aa-2c41-44e1-9ad5-fbf1522cb86d)
-    (property "Reference" "#PWR08" (at 248.285 42.545 0)
+    (property "Reference" "#PWR052" (at 248.285 42.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 248.285 40.64 0)
@@ -3786,7 +3951,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -3795,7 +3960,7 @@
   (symbol (lib_id "power:GND") (at 185.42 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 48de9855-8abb-4b07-a34a-c7a07701a95d)
-    (property "Reference" "#PWR033" (at 185.42 115.57 0)
+    (property "Reference" "#PWR021" (at 185.42 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 185.42 113.03 0)
@@ -3811,7 +3976,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3834,7 +3999,7 @@
   (symbol (lib_id "power:GND") (at 220.98 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 49653c8f-8424-4258-a028-4ce4ef356d40)
-    (property "Reference" "#PWR037" (at 220.98 115.57 0)
+    (property "Reference" "#PWR036" (at 220.98 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 220.98 113.03 0)
@@ -3850,7 +4015,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -3870,7 +4035,7 @@
   (symbol (lib_id "power:+3.3VA") (at 184.15 34.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 49f470c7-4de2-455e-b6ca-2d821b3d36df)
-    (property "Reference" "#PWR014" (at 184.15 38.735 0)
+    (property "Reference" "#PWR019" (at 184.15 38.735 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 184.15 31.115 0)
@@ -3886,7 +4051,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -3895,7 +4060,7 @@
   (symbol (lib_id "power:+3.3VA") (at 210.82 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4d323ac4-aa4d-4268-8114-45c43b8b0e2d)
-    (property "Reference" "#PWR011" (at 210.82 22.86 0)
+    (property "Reference" "#PWR033" (at 210.82 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 210.82 15.24 0)
@@ -3911,7 +4076,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -3920,7 +4085,7 @@
   (symbol (lib_id "power:+3V3") (at 230.505 150.495 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4d4e27f1-7dd9-470b-8def-452853062266)
-    (property "Reference" "#PWR050" (at 230.505 154.305 0)
+    (property "Reference" "#PWR042" (at 230.505 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 230.505 146.685 0)
@@ -3936,7 +4101,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -3982,7 +4147,7 @@
   (symbol (lib_id "power:+5V") (at 58.42 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 57508c0b-c909-4f2c-814c-69c85834b13d)
-    (property "Reference" "#PWR025" (at 58.42 116.84 0)
+    (property "Reference" "#PWR08" (at 58.42 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 58.42 109.22 0)
@@ -3998,7 +4163,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -4007,7 +4172,7 @@
   (symbol (lib_id "power:GND") (at 95.885 81.915 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 58381238-58ae-4087-b392-cc7bb93cda21)
-    (property "Reference" "#PWR021" (at 95.885 88.265 0)
+    (property "Reference" "#PWR011" (at 95.885 88.265 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 95.885 86.36 0)
@@ -4023,7 +4188,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -4032,7 +4197,7 @@
   (symbol (lib_id "power:GND") (at 194.31 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5a146313-03db-41e2-ad4a-a5a982dd5306)
-    (property "Reference" "#PWR043" (at 194.31 136.525 0)
+    (property "Reference" "#PWR028" (at 194.31 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.31 133.985 0)
@@ -4048,7 +4213,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4065,10 +4230,36 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 133.35 148.59 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5c17f804-d30b-47f5-89dc-afadb207b7dd)
+    (property "Reference" "D4" (at 135.255 147.32 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "PWR" (at 135.255 149.225 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (at 133.35 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 133.35 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7d50ecb9-3c73-4f36-adf3-84af6830caf6))
+    (pin "2" (uuid 16011c55-d508-4311-895b-650d5a2d4e59))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "D4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C_Small") (at 212.09 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5e0e94de-de84-44db-b8d9-d58ac140a573)
-    (property "Reference" "C10" (at 214.63 104.775 0)
+    (property "Reference" "C11" (at 214.63 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 214.63 107.315 0)
@@ -4085,7 +4276,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C10") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4130,13 +4321,13 @@
   (symbol (lib_id "Device:R_Small") (at 255.27 55.88 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6589983c-b413-4392-8484-526531fe63b6)
-    (property "Reference" "R3" (at 256.54 55.245 0)
+    (property "Reference" "R13" (at 256.54 55.245 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 256.54 57.15 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 255.27 55.88 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 255.27 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 255.27 55.88 0)
@@ -4147,7 +4338,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R3") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -4156,7 +4347,7 @@
   (symbol (lib_id "power:GND") (at 105.41 83.185 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 68762677-a41c-491c-92c0-7a8d93d176f2)
-    (property "Reference" "#PWR032" (at 105.41 89.535 0)
+    (property "Reference" "#PWR013" (at 105.41 89.535 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 105.41 87.63 0)
@@ -4172,7 +4363,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -4206,7 +4397,7 @@
   (symbol (lib_id "Device:C_Small") (at 238.76 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 701b9c6f-a86a-41f3-93fa-dd3d83a1df87)
-    (property "Reference" "C20" (at 241.3 125.73 0)
+    (property "Reference" "C18" (at 241.3 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 241.3 128.27 0)
@@ -4223,7 +4414,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C20") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4243,7 +4434,7 @@
   (symbol (lib_id "power:GND") (at 35.56 182.245 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7548e070-fc1e-4c6c-b1c7-94adcdde98ac)
-    (property "Reference" "#PWR015" (at 35.56 188.595 0)
+    (property "Reference" "#PWR01" (at 35.56 188.595 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 186.055 0)
@@ -4259,7 +4450,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4279,7 +4470,7 @@
   (symbol (lib_id "power:GND") (at 238.76 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7609396f-7066-47d1-b27f-bab95bfc3328)
-    (property "Reference" "#PWR039" (at 238.76 115.57 0)
+    (property "Reference" "#PWR045" (at 238.76 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 238.76 113.03 0)
@@ -4292,6 +4483,155 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c67eaf0b-904c-476e-9536-6513f6153239))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR045") (unit 1)
+        )
+      )
+      (project "SDR_Carrier"
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
+          (reference "#PWR027") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
+          (reference "#PWR08") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
+          (reference "#PWR050") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+12V") (at 37.465 173.99 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 786ddf83-aada-4b7f-b19b-c9c1a1ff9423)
+    (property "Reference" "#PWR02" (at 37.465 177.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+12V" (at 37.465 170.815 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 37.465 173.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 37.465 173.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a05f7a49-0131-4938-a47b-d820d69b13d1))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 216.535 20.955 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 815d41bf-627c-4f46-a133-579a267890bd)
+    (property "Reference" "R11" (at 216.535 17.145 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "0" (at 216.535 19.05 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 216.535 20.955 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 216.535 20.955 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ffcb3fb2-9af8-434b-a116-b2a6222c606f))
+    (pin "2" (uuid ec800944-e526-4c65-8aab-0addfb3fbf7b))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "R11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 105.41 79.375 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 81fad550-1c17-47c1-8934-e0429de03337)
+    (property "Reference" "R4" (at 106.68 78.74 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10k" (at 106.68 80.645 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 105.41 79.375 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 105.41 79.375 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d16babe5-3521-4a16-9f71-04d876dcda14))
+    (pin "2" (uuid cb43ab85-b23d-4ee0-9fb5-9189010c82de))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 60.325 184.15 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 84cbb84d-1021-470d-84b5-dca33ff48652)
+    (property "Reference" "#PWR09" (at 60.325 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 60.325 187.96 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 60.325 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 60.325 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4c511df9-b728-4926-a645-7c7f31892119))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR09") (unit 1)
+        )
+      )
+      (project "SDR_Carrier"
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
+          (reference "#PWR028") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
+          (reference "#PWR010") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
+          (reference "#PWR088") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 229.87 109.22 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 85590e29-010b-4c2b-ad02-a2cbca93a2fe)
+    (property "Reference" "#PWR039" (at 229.87 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 229.87 113.03 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 229.87 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 229.87 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 06ee104b-ce9b-4262-abf6-4a8fb30f8cfe))
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
@@ -4312,150 +4652,27 @@
     )
   )
 
-  (symbol (lib_id "power:+12V") (at 37.465 173.99 0) (mirror y) (unit 1)
+  (symbol (lib_id "Device:LED") (at 141.605 148.59 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 786ddf83-aada-4b7f-b19b-c9c1a1ff9423)
-    (property "Reference" "#PWR020" (at 37.465 177.8 0)
+    (uuid 86a6acb7-a121-4e67-b7cd-90957d90aefa)
+    (property "Reference" "D5" (at 143.51 147.32 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "RST" (at 143.51 149.225 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (at 141.605 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+12V" (at 37.465 170.815 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 37.465 173.99 0)
+    (property "Datasheet" "~" (at 141.605 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 37.465 173.99 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a05f7a49-0131-4938-a47b-d820d69b13d1))
+    (pin "1" (uuid 1b490996-be8d-42fc-88fa-c1503ff8dd16))
+    (pin "2" (uuid e3af23bc-efbb-45ba-9d16-a08eec07f1d4))
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR020") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Small") (at 216.535 20.955 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 815d41bf-627c-4f46-a133-579a267890bd)
-    (property "Reference" "R6" (at 216.535 17.145 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "0" (at 216.535 19.05 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 216.535 20.955 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 216.535 20.955 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ffcb3fb2-9af8-434b-a116-b2a6222c606f))
-    (pin "2" (uuid ec800944-e526-4c65-8aab-0addfb3fbf7b))
-    (instances
-      (project "Pi5_PCIe"
-        (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Small") (at 105.41 79.375 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 81fad550-1c17-47c1-8934-e0429de03337)
-    (property "Reference" "R30" (at 106.68 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10k" (at 106.68 80.645 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 105.41 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 105.41 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d16babe5-3521-4a16-9f71-04d876dcda14))
-    (pin "2" (uuid cb43ab85-b23d-4ee0-9fb5-9189010c82de))
-    (instances
-      (project "Pi5_PCIe"
-        (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R30") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 60.325 184.15 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 84cbb84d-1021-470d-84b5-dca33ff48652)
-    (property "Reference" "#PWR018" (at 60.325 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 60.325 187.96 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 60.325 184.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 60.325 184.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4c511df9-b728-4926-a645-7c7f31892119))
-    (instances
-      (project "Pi5_PCIe"
-        (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR018") (unit 1)
-        )
-      )
-      (project "SDR_Carrier"
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
-          (reference "#PWR028") (unit 1)
-        )
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
-          (reference "#PWR010") (unit 1)
-        )
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
-          (reference "#PWR088") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 229.87 109.22 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 85590e29-010b-4c2b-ad02-a2cbca93a2fe)
-    (property "Reference" "#PWR038" (at 229.87 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 229.87 113.03 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 229.87 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 229.87 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 06ee104b-ce9b-4262-abf6-4a8fb30f8cfe))
-    (instances
-      (project "Pi5_PCIe"
-        (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR038") (unit 1)
-        )
-      )
-      (project "SDR_Carrier"
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
-          (reference "#PWR027") (unit 1)
-        )
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
-          (reference "#PWR08") (unit 1)
-        )
-        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
-          (reference "#PWR050") (unit 1)
+          (reference "D5") (unit 1)
         )
       )
     )
@@ -4464,7 +4681,7 @@
   (symbol (lib_id "power:+3.3VA") (at 172.085 34.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8729256b-b975-48a4-aa5b-2a9966c5ec0e)
-    (property "Reference" "#PWR013" (at 172.085 38.735 0)
+    (property "Reference" "#PWR017" (at 172.085 38.735 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 172.085 31.115 0)
@@ -4480,7 +4697,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -4489,7 +4706,7 @@
   (symbol (lib_id "power:+3V3") (at 118.11 173.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87999b6d-6a89-44ef-940c-f308e7748e78)
-    (property "Reference" "#PWR031" (at 118.11 177.8 0)
+    (property "Reference" "#PWR015" (at 118.11 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 118.11 170.18 0)
@@ -4505,7 +4722,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -4514,7 +4731,7 @@
   (symbol (lib_id "power:GND") (at 260.985 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8b523a7c-516a-4cb1-8257-39d0039c59d5)
-    (property "Reference" "#PWR054" (at 260.985 158.75 0)
+    (property "Reference" "#PWR056" (at 260.985 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 260.985 156.21 0)
@@ -4530,7 +4747,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4553,7 +4770,7 @@
   (symbol (lib_id "power:+3V3") (at 194.31 43.815 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8bebb115-4443-47aa-8851-7d12c5c15abf)
-    (property "Reference" "#PWR02" (at 194.31 47.625 0)
+    (property "Reference" "#PWR026" (at 194.31 47.625 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 194.31 40.005 0)
@@ -4569,7 +4786,33 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR026") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 141.605 140.335 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 8c709c2f-a97b-4f2c-8f69-136aa92025ea)
+    (property "Reference" "R15" (at 142.875 139.7 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1k" (at 142.875 141.605 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 141.605 140.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 141.605 140.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid cd5dc6e8-c24b-4702-b05d-162c7b820458))
+    (pin "2" (uuid 2b8f9abd-eb21-4108-9f9c-3836dadc2f08))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -4578,7 +4821,7 @@
   (symbol (lib_id "power:+3.3VA") (at 177.165 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d128dc3-9b0d-4473-a988-03bda1dcecdc)
-    (property "Reference" "#PWR09" (at 177.165 76.2 0)
+    (property "Reference" "#PWR018" (at 177.165 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 177.165 68.58 0)
@@ -4594,7 +4837,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -4603,7 +4846,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 185.42 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8fa10513-f743-4194-ac81-256b3346e95e)
-    (property "Reference" "C7" (at 187.96 104.14 0)
+    (property "Reference" "C5" (at 187.96 104.14 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "150u" (at 187.96 106.68 0)
@@ -4623,7 +4866,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C7") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4640,7 +4883,7 @@
   (symbol (lib_id "power:+3.3VA") (at 187.96 53.975 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90497fcc-8b67-4833-a31c-db4d3f5856a8)
-    (property "Reference" "#PWR03" (at 187.96 57.785 0)
+    (property "Reference" "#PWR025" (at 187.96 57.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 187.96 50.165 0)
@@ -4656,7 +4899,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -4665,7 +4908,7 @@
   (symbol (lib_id "Device:C_Small") (at 118.11 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 90ccb253-2ab6-4038-99f6-990b2d85a2a9)
-    (property "Reference" "C6" (at 120.65 179.705 0)
+    (property "Reference" "C4" (at 120.65 179.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 120.65 182.245 0)
@@ -4682,7 +4925,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C6") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4702,7 +4945,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x10_Odd_Even") (at 48.26 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 92ad51fb-6e7e-4f0e-b523-802a86366ed0)
-    (property "Reference" "J3" (at 49.53 107.95 0)
+    (property "Reference" "J2" (at 49.53 107.95 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Pi5 PCIe" (at 49.53 109.855 0)
@@ -4740,7 +4983,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "J3") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -4749,7 +4992,7 @@
   (symbol (lib_id "power:GND") (at 247.65 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 938824ce-76ed-4f69-8c60-403d23a78800)
-    (property "Reference" "#PWR040" (at 247.65 115.57 0)
+    (property "Reference" "#PWR049" (at 247.65 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 247.65 113.03 0)
@@ -4765,7 +5008,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4785,7 +5028,7 @@
   (symbol (lib_id "Device:C_Small") (at 51.435 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 966e4968-d72c-48e5-be07-71cdbb11550c)
-    (property "Reference" "C2" (at 53.975 179.705 0)
+    (property "Reference" "C1" (at 53.975 179.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 53.975 182.245 0)
@@ -4802,7 +5045,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C2") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4822,7 +5065,7 @@
   (symbol (lib_id "power:+3.3VA") (at 238.76 122.555 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 980d5399-d507-41fb-8d58-ba82eb46a66f)
-    (property "Reference" "#PWR048" (at 238.76 126.365 0)
+    (property "Reference" "#PWR046" (at 238.76 126.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 238.76 118.745 0)
@@ -4838,7 +5081,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -4847,7 +5090,7 @@
   (symbol (lib_id "power:+5V") (at 245.745 150.495 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 99b9a7d7-888e-4ce6-bf0f-0b3e1cf75ac5)
-    (property "Reference" "#PWR052" (at 245.745 154.305 0)
+    (property "Reference" "#PWR048" (at 245.745 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 245.745 146.685 0)
@@ -4863,7 +5106,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -4872,7 +5115,7 @@
   (symbol (lib_id "power:GND") (at 102.235 184.15 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9d62a88f-c057-491d-8ec6-71a006751f05)
-    (property "Reference" "#PWR027" (at 102.235 190.5 0)
+    (property "Reference" "#PWR012" (at 102.235 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 102.235 187.96 0)
@@ -4888,7 +5131,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -4905,10 +5148,35 @@
     )
   )
 
+  (symbol (lib_id "power:+3V3") (at 133.35 135.89 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a7ef9dbe-fe78-47c4-99c0-f6a921f05d95)
+    (property "Reference" "#PWR059" (at 133.35 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 133.35 132.08 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 133.35 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 133.35 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6dca1c6f-e35f-4905-b75b-96b1423d4e02))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR059") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+12V") (at 253.365 150.495 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a8d65727-cc3b-4787-baf6-e1de16958821)
-    (property "Reference" "#PWR053" (at 253.365 154.305 0)
+    (property "Reference" "#PWR054" (at 253.365 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 253.365 147.32 0)
@@ -4924,7 +5192,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
     )
@@ -4933,7 +5201,7 @@
   (symbol (lib_id "power:GND") (at 230.505 79.375 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aa228c5b-5213-4417-98b5-dd287e580e2a)
-    (property "Reference" "#PWR05" (at 230.505 85.725 0)
+    (property "Reference" "#PWR041" (at 230.505 85.725 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 230.505 83.82 0)
@@ -4949,7 +5217,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -4958,7 +5226,7 @@
   (symbol (lib_id "power:+12V") (at 198.755 38.735 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ab85ebc7-6b40-4725-a338-4767396ea32f)
-    (property "Reference" "#PWR01" (at 198.755 42.545 0)
+    (property "Reference" "#PWR029" (at 198.755 42.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 198.755 35.56 0)
@@ -4974,7 +5242,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -4983,7 +5251,7 @@
   (symbol (lib_id "power:GND") (at 229.87 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ac7e9b6d-b5f5-48f0-8a4c-62909e974a5b)
-    (property "Reference" "#PWR047" (at 229.87 136.525 0)
+    (property "Reference" "#PWR040" (at 229.87 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 229.87 133.985 0)
@@ -4999,7 +5267,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5047,13 +5315,13 @@
   (symbol (lib_id "Device:R_Small") (at 44.45 80.645 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b5a11cc8-8e7c-4b31-a437-cecb3290fe74)
-    (property "Reference" "R11" (at 44.45 76.835 90)
+    (property "Reference" "R2" (at 44.45 76.835 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNF" (at 44.45 78.74 90)
       (effects (font (size 1.27 1.27) italic))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 44.45 80.645 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 44.45 80.645 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 80.645 0)
@@ -5064,7 +5332,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R11") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5073,7 +5341,7 @@
   (symbol (lib_id "power:GND") (at 51.435 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b72f3163-af18-44a5-a308-54741f358d63)
-    (property "Reference" "#PWR017" (at 51.435 190.5 0)
+    (property "Reference" "#PWR06" (at 51.435 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 51.435 187.96 0)
@@ -5089,7 +5357,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5109,7 +5377,7 @@
   (symbol (lib_id "power:GND") (at 203.2 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b7a99ae8-e942-487c-a529-13a4cc062782)
-    (property "Reference" "#PWR044" (at 203.2 136.525 0)
+    (property "Reference" "#PWR032" (at 203.2 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 203.2 133.985 0)
@@ -5125,7 +5393,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5145,7 +5413,7 @@
   (symbol (lib_id "power:GND") (at 220.98 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b835dcff-1c23-4a6c-b507-5af4b24ab53a)
-    (property "Reference" "#PWR046" (at 220.98 136.525 0)
+    (property "Reference" "#PWR037" (at 220.98 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 220.98 133.985 0)
@@ -5161,7 +5429,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5206,7 +5474,7 @@
   (symbol (lib_id "Device:C_Small") (at 238.76 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bc22dfdc-532f-4e62-87c4-c47b0ef3cfea)
-    (property "Reference" "C13" (at 241.3 104.775 0)
+    (property "Reference" "C17" (at 241.3 104.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 241.3 107.315 0)
@@ -5223,7 +5491,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C13") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5304,7 +5572,7 @@
   (symbol (lib_id "power:GND") (at 238.76 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c47744f7-d339-4c50-931b-69e3f5898a7d)
-    (property "Reference" "#PWR049" (at 238.76 136.525 0)
+    (property "Reference" "#PWR047" (at 238.76 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 238.76 133.985 0)
@@ -5320,7 +5588,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5340,13 +5608,13 @@
   (symbol (lib_id "Device:R_Small") (at 44.45 74.295 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c53ab478-edba-4fbf-9cee-5f2b08badb11)
-    (property "Reference" "R10" (at 44.45 70.485 90)
+    (property "Reference" "R1" (at 44.45 70.485 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNF" (at 44.45 72.39 90)
       (effects (font (size 1.27 1.27) italic))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 44.45 74.295 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 44.45 74.295 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 74.295 0)
@@ -5357,7 +5625,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R10") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -5366,13 +5634,13 @@
   (symbol (lib_id "Device:R_Small") (at 184.15 40.005 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cbc601b8-c964-4c85-9426-c6b46686f941)
-    (property "Reference" "R7" (at 182.88 39.37 0)
+    (property "Reference" "R9" (at 182.88 39.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 182.88 41.275 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 184.15 40.005 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 184.15 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 184.15 40.005 0)
@@ -5383,7 +5651,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R7") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -5392,7 +5660,7 @@
   (symbol (lib_id "power:GND") (at 57.15 138.43 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cc54887d-9ca8-4730-858e-8cfaa445e98d)
-    (property "Reference" "#PWR023" (at 57.15 144.78 0)
+    (property "Reference" "#PWR07" (at 57.15 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 57.15 142.875 0)
@@ -5408,7 +5676,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -5417,7 +5685,7 @@
   (symbol (lib_id "power:GND") (at 247.65 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cd5afd84-e2ec-47ad-9551-0fbb1d446c2d)
-    (property "Reference" "#PWR056" (at 247.65 136.525 0)
+    (property "Reference" "#PWR051" (at 247.65 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 247.65 133.985 0)
@@ -5433,7 +5701,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5480,7 +5748,7 @@
   (symbol (lib_id "power:+3V3") (at 249.555 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d4b52f5f-7112-428e-b9e7-3750877f9141)
-    (property "Reference" "#PWR07" (at 249.555 57.15 0)
+    (property "Reference" "#PWR053" (at 249.555 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 249.555 49.53 0)
@@ -5496,7 +5764,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
     )
@@ -5505,7 +5773,7 @@
   (symbol (lib_id "Device:C_Small") (at 212.09 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d9a07402-3ad7-403e-87d0-31b7817ae656)
-    (property "Reference" "C17" (at 214.63 125.73 0)
+    (property "Reference" "C12" (at 214.63 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 214.63 128.27 0)
@@ -5522,7 +5790,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C17") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5542,13 +5810,13 @@
   (symbol (lib_id "Device:D_Schottky_Small") (at 44.45 67.945 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid daf77bc1-804f-4f30-a466-31093fb95666)
-    (property "Reference" "D3" (at 44.45 63.5 0)
+    (property "Reference" "D2" (at 44.45 63.5 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DNF" (at 44.45 65.405 0)
       (effects (font (size 1.27 1.27) italic))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-123F" (at 44.45 67.945 90)
+    (property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (at 44.45 67.945 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 67.945 90)
@@ -5562,7 +5830,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "D3") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5576,7 +5844,7 @@
   (symbol (lib_id "Device:C_Small") (at 229.87 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dbc5846e-0027-44e0-898b-c7cc7a121eb9)
-    (property "Reference" "C19" (at 232.41 125.73 0)
+    (property "Reference" "C16" (at 232.41 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 232.41 128.27 0)
@@ -5593,7 +5861,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C19") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5613,7 +5881,7 @@
   (symbol (lib_id "power:+3V3") (at 185.42 121.285 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dd933b93-e0b6-47b3-80ca-a23b25f7e83b)
-    (property "Reference" "#PWR028" (at 185.42 125.095 0)
+    (property "Reference" "#PWR022" (at 185.42 125.095 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 185.42 117.475 0)
@@ -5629,7 +5897,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -5638,7 +5906,7 @@
   (symbol (lib_id "Device:C_Small") (at 247.65 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dde58da5-5d66-4650-b434-16931468c24b)
-    (property "Reference" "C1" (at 250.19 125.73 0)
+    (property "Reference" "C20" (at 250.19 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 250.19 128.27 0)
@@ -5655,7 +5923,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C1") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5675,7 +5943,7 @@
   (symbol (lib_id "power:+3.3VA") (at 255.27 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid df101909-a246-4fdc-a05d-e87358d48879)
-    (property "Reference" "#PWR010" (at 255.27 55.88 0)
+    (property "Reference" "#PWR055" (at 255.27 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 255.27 48.26 0)
@@ -5691,7 +5959,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
     )
@@ -5700,13 +5968,13 @@
   (symbol (lib_id "Device:R_Small") (at 182.245 73.66 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid df931d8f-d28b-4549-8a2f-2ada3127579f)
-    (property "Reference" "R2" (at 182.245 69.85 90)
+    (property "Reference" "R8" (at 182.245 69.85 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 182.245 71.755 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 182.245 73.66 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 182.245 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 182.245 73.66 0)
@@ -5717,7 +5985,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R2") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -5726,7 +5994,7 @@
   (symbol (lib_id "power:+3V3") (at 222.25 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e2424775-c49f-454a-80db-e3de70d05b3c)
-    (property "Reference" "#PWR012" (at 222.25 22.86 0)
+    (property "Reference" "#PWR038" (at 222.25 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 222.25 15.24 0)
@@ -5742,7 +6010,46 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR038") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 141.605 154.305 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e96ccda5-c901-4f08-affb-c667139b1e5a)
+    (property "Reference" "#PWR058" (at 141.605 160.655 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 141.605 158.115 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 141.605 154.305 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 141.605 154.305 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2eb0b7c7-15e3-424d-855b-79c1088aa5a9))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "#PWR058") (unit 1)
+        )
+      )
+      (project "SDR_Carrier"
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b"
+          (reference "#PWR027") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/a7387406-48cc-4ef4-a246-59e37cce47de"
+          (reference "#PWR08") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/7450db62-14c0-4445-b3aa-49bf2347e9e1"
+          (reference "#PWR052") (unit 1)
+        )
+        (path "/cbca3af7-7926-4109-941a-ea748f01f12b/dbace0ff-c062-4786-8003-27585c8191a9"
+          (reference "#PWR087") (unit 1)
         )
       )
     )
@@ -5751,7 +6058,7 @@
   (symbol (lib_id "Device:C_Small") (at 220.98 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed168f6f-4953-42c9-98e1-e98c5d8466fc)
-    (property "Reference" "C18" (at 223.52 125.73 0)
+    (property "Reference" "C14" (at 223.52 125.73 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 223.52 128.27 0)
@@ -5768,7 +6075,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C18") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5788,7 +6095,7 @@
   (symbol (lib_id "power:+5V") (at 48.26 167.005 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ef5e878f-9864-4cfe-9867-c257f22684ca)
-    (property "Reference" "#PWR019" (at 48.26 170.815 0)
+    (property "Reference" "#PWR05" (at 48.26 170.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 48.26 163.195 0)
@@ -5804,7 +6111,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -5813,7 +6120,7 @@
   (symbol (lib_id "power:GND") (at 212.09 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f2f7af1d-4095-4686-8e4f-ef99ec948c73)
-    (property "Reference" "#PWR045" (at 212.09 136.525 0)
+    (property "Reference" "#PWR035" (at 212.09 136.525 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.09 133.985 0)
@@ -5829,7 +6136,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
       (project "SDR_Carrier"
@@ -5849,7 +6156,7 @@
   (symbol (lib_id "power:+3.3VA") (at 238.125 150.495 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f5345e7c-4432-47b9-a7f4-5903b81f7c01)
-    (property "Reference" "#PWR051" (at 238.125 154.305 0)
+    (property "Reference" "#PWR044" (at 238.125 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 238.125 146.685 0)
@@ -5865,22 +6172,22 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Device:R_Small") (at 244.475 34.925 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid f71da14d-be1e-41d1-b9d1-099ac273f4b8)
-    (property "Reference" "R1" (at 244.475 30.48 90)
+    (property "Reference" "R12" (at 244.475 31.115 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 244.475 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 244.475 34.925 0)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 244.475 34.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 244.475 34.925 0)
@@ -5891,7 +6198,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "R1") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -5900,7 +6207,7 @@
   (symbol (lib_id "power:GND") (at 202.565 79.375 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fb12ccd5-4c1a-4e29-8c47-09cfc7b4e6db)
-    (property "Reference" "#PWR06" (at 202.565 85.725 0)
+    (property "Reference" "#PWR030" (at 202.565 85.725 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 202.565 83.82 0)
@@ -5916,7 +6223,33 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR030") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 133.35 140.335 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid fd2a10ad-51a7-4d3b-9c5d-7f3cc41d4e9b)
+    (property "Reference" "R14" (at 134.62 139.7 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1k" (at 134.62 141.605 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 133.35 140.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 133.35 140.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c5a07d10-14ae-4904-a531-70f0e9c1b8f5))
+    (pin "2" (uuid 05b222b6-4126-4482-a441-e2eae4522514))
+    (instances
+      (project "Pi5_PCIe"
+        (path "/52838244-1450-432b-bf11-399e401c933b"
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -5925,7 +6258,7 @@
   (symbol (lib_id "Device:C_Polarized_Small") (at 185.42 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe18e8bf-31fa-4469-a09d-87ddd36285ba)
-    (property "Reference" "C4" (at 187.96 125.095 0)
+    (property "Reference" "C6" (at 187.96 125.095 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "150u" (at 187.96 127.635 0)
@@ -5945,7 +6278,7 @@
     (instances
       (project "Pi5_PCIe"
         (path "/52838244-1450-432b-bf11-399e401c933b"
-          (reference "C4") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
       (project "SDR_Carrier"

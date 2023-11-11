@@ -6,3 +6,13 @@ In this bare-bones project I document a working PCIe pinout talk through my hard
 To see what I did, check out my walkthrough of the process on YouTube: [Raspberry Pi 5 - Unofficial PCIe Success - Hacking the Pi5's PCIe into life](https://youtu.be/G5VOzO_ERTM).
 
 **Note: This project is a reverse engineering - Please wait for/use the official Raspberry Pi documentation when using the PCIe FPC**
+
+## Pi5 PCIe Breakout Board
+
+The board is a quick test board. It could definitely be improved :)
+
+![3D Model of PCIe board](https://github.com/m1geo/Pi5_PCIe/blob/main/photos/Pi5_PCIe_3D.png)
+
+## Pi5 NVMe Breakout Board
+
+_Work in progress_
