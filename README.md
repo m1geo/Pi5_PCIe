@@ -1,4 +1,4 @@
-# Pi5_PCIe
+# Pi5 PCIe & M2 NVMe
 A crude reverse engineering of the Raspberry Pi 5's FPC PCIe connector &amp; potential breakout board.
 
 In this bare-bones project I document a working PCIe pinout talk through my hardware tinkering to get the Raspberry Pi 5's PCIe connected to something. I had only seen Raspberry Pi's boards with their RP2040 and lots of parts on board. My professional experience with PCIe was that it either just goes or it really doesn't. I decided to try and make it do something for no reason other than the technical challenge.
@@ -13,6 +13,6 @@ The board is a quick test board. It could definitely be improved :)
 
 ![3D Model of PCIe board](https://github.com/m1geo/Pi5_PCIe/blob/main/photos/Pi5_PCIe_3D.png)
 
-## Pi5 NVMe Breakout Board
+## Pi5 M.2 NVMe Breakout Board
 
-_Work in progress_
+![3D Model of M.2 NVMe board](https://github.com/m1geo/Pi5_PCIe/blob/main/photos/Pi5_M2_Hat_3D.png)

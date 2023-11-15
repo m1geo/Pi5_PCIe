@@ -6,8 +6,8 @@
 
   (title_block
     (title "Raspberry Pi 5 PCIe Breakout")
-    (date "2023-11-11")
-    (rev "0.4")
+    (date "2023-11-15")
+    (rev "0.99")
     (company "George M1GEO, Chris G8OCV")
     (comment 1 "https://www.george-smart.co.uk")
     (comment 2 "https://github.com/m1geo/Pi5_PCIe")
